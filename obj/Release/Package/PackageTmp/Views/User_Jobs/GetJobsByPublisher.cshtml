@@ -1,0 +1,49 @@
+﻿@model IEnumerable<jobs.Models.JobsViewModel>
+
+@foreach (var gr in Model)
+{
+    <h3>@gr.JobTitle</h3>
+    @Html.ActionLink("حذف", "DeleteJobByPublisher", new { jobtitle = gr.JobTitle });
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                اسم الباحث
+            </th>
+            <th>
+                نص الرسالة
+            </th>
+            <th>
+                تاريخ الارسال
+            </th>
+            <th>
+                السيرة الذاتية
+            </th>
+        </tr>
+        @foreach (var item in gr.Items)
+        {
+            <tr>
+                <td>
+                    @item.User.UserName
+                </td>
+                <td>
+                    @Html.Raw(HttpUtility.HtmlDecode(Html.DisplayFor(modelItem => item.Message).ToString()))
+                </td>
+                <td>
+                    @item.ApplyDate
+                </td>
+                <td>
+                    <input disabled="disabled" value="@item.CV" id="cv">
+                    <a href="@Url.Action("GetReport")" onclick="navigate(this.href); return false;">اظهار السيرة الذاتية خاصته</a>
+                </td>
+
+
+            </tr>
+        }
+    </table>
+}
+<script>
+    function navigate(taregetUrl) {
+        var value = $("#cv").val();
+        window.open(taregetUrl + '?FileName=' + "CV-Hager Hussien Emam.pdf", "_blank");
+    }
+</script>

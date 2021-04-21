@@ -1,0 +1,65 @@
+﻿@model IEnumerable<jobs.Models.ApplicationUser>
+@using System.Web.Mvc.Html
+@{
+    ViewBag.Title = "The_Users";
+    Layout = "~/Views/Shared/_MainLayoutPage.cshtml";
+}
+
+<h2>The_Users</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Statues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Statues)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
+                @Html.HiddenFor(modelItem=>item.Id)
+                @if (item.UserType == "ناشر")
+                {
+                    @Html.ActionLink("التفاصيل", "GetJobsByPublisher", "User_Jobs", new { Id = item.Id }, new { Id = item.Id })
+                }
+                else if (item.UserType == "باحث")
+                {
+                    @Html.ActionLink("التفاصيل", "Get_JobsByUser", "User_Jobs", new { Id = item.Id }, new { Id = item.Id })
+                }
+                @*|
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("العودة", "Index", "Home")

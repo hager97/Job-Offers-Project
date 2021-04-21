@@ -1,0 +1,65 @@
+﻿@model jobs.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Profile_User";
+    Layout = "~/Views/Shared/_MainLayoutPage.cshtml";
+}
+
+<h2>Profile_User</h2>
+
+<div>
+    <h4>ApplicationUser</h4>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <dl class="dl-horizontal">
+            @Html.HiddenFor(model => model.Id)
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserType)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Statues)
+            </dt>
+
+            <dd>
+                @Html.RadioButtonFor(model => model.Statues, "متاح") متاح
+                @Html.RadioButtonFor(model => model.Statues, "محظور")محظور
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+
+
+
+        </dl>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="حفظ" class="btn btn-default" />
+            </div>
+        </div>
+    }
+
+
+</div>
+<p>
+
+    @Html.ActionLink("Back to List", "show_complaints")
+</p>

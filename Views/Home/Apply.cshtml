@@ -1,0 +1,86 @@
+﻿@model jobs.Models.ApplyForJob
+@{
+    ViewBag.Title = "Apply";
+    Layout = "~/Views/Shared/_MainLayoutPage.cshtml";
+}
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+
+@using (Html.BeginForm("Apply", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="alert alert-danger" id="error-div" style="display:none;">
+            <span id="view-error">
+
+            </span>
+        </div>
+        <h4>ApplyForJob</h4>
+        @{
+            if (ViewBag.result != null)
+            {
+                if (ViewBag.result == "تم الاضافة بنجاح")
+                { <h3 class="alert alert-success"> @ViewBag.result;</h3>}
+            else
+            {<h3 class="alert alert-danger"> @ViewBag.result;</h3> }
+    }
+        }
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @id = "Message" } })
+                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("CV", "سيرتك الذاتية", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="CV" id="mycv" />
+                @Html.ValidationMessage("CV", "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="تأكيد" class="btn btn-default" id="save" />
+            </div>
+        </div>
+    </div>
+}
+@section scripts{
+    <script>
+        $(function () {
+            $("#save").click(function () {
+                //check if the input cv is empty
+                if ($("#mycv").val() == "") {
+                    $("#error-div").fadeIn();
+                    $("#view-error").append("الخاص بك cv رجاء قم بأختيار ال");
+                    return false;
+                }
+                if ($("#mycv").val() != "") {
+                    //check if the image extension is valid
+                    var filename = document.getElementById("myimage").value;
+                    var extensioncv = filename.substr(filename.lastIndexOf('.') + 1);
+                    var validextentions = ['pdf', 'word'];
+                    if ($.inArray(extensioncv, validextentions) == -1) {
+                        $("#error-div").fadeIn();
+                        $("#view-error").append("رجاء قم بأختيار سيرة ذاتية بامتداد صحيح");
+                        return false;
+                    }
+                }
+
+            });
+
+        });
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+    CKEDITOR.replace("Message");
+</script>
