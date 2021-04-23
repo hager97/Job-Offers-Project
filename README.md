@@ -13,7 +13,10 @@
 ## General info
 In this site project, we can post many jobs through the publisher's account and apply for many jobs through a researcher's account, and we can also manage the site through an account admin
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./imgs/researcher.png)
+![Example screenshot](./imgs/publisher.png)
+![Example screenshot](./imgs/admin.png)
+
 
 ## Technologies
 * Tech 1 - version 1.0
