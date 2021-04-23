@@ -13,9 +13,9 @@
 ## General info
 In this site project, we can post many jobs through the publisher's account and apply for many jobs through a researcher's account, and we can also manage the site through an account admin
 ## Screenshots
-![Example screenshot](./imgs/researcher.png)
-![Example screenshot](./imgs/publisher.png)
-![Example screenshot](./imgs/admin.png)
+![Example screenshot](./imgs/researcher.PNG)
+![Example screenshot](./imgs/publisher.PNG)
+![Example screenshot](./imgs/admin.PNG)
 
 
 ## Technologies
