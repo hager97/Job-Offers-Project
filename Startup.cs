@@ -30,8 +30,8 @@ namespace jobs
                 role.Name = "Admin";
                 roleManager.Create(role);
                 ApplicationUser user = new ApplicationUser();
-                user.Email = "خالد";
-                user.UserName = "Khalid_essaadani@hotmail.fr";
+                user.Email = "mahmoud";
+                user.UserName = "mahmoud@gmail.com";
                 user.UserType = "Admin";
                 user.Statues = "متاح";
                 var Check = userManager.Create(user, "Hunger@97");
