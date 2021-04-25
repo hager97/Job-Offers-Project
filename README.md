@@ -20,6 +20,10 @@ In this site project, we can post many jobs through the publisher's account and 
 * admin usecase diagram
 
 ![Example screenshot](./imgs/admin.PNG)
+* Database diagram greated from entity framework codefirst
+
+![Example screenshot](./imgs/database greated from code first.PNG)
+
 
 
 ## Technologies
