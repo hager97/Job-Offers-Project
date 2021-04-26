@@ -44,7 +44,7 @@ In this site project, we can post many jobs through the publisher's account and 
 ![Example screenshot](./imgs/pu.PNG)
 
 * publisher (publish job)
-* 
+
 ![Example screenshot](./imgs/acpu.PNG)
 
 
