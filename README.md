@@ -18,9 +18,7 @@ In this site project, we can post many jobs through the publisher's account and 
 
 ![Example screenshot](./imgs/publisher.PNG)
 
-* publisher (publish job)
-* 
-![Example screenshot](./imgs/acpu.PNG)
+
 * admin usecase diagram
 
 ![Example screenshot](./imgs/admin.PNG)
@@ -44,6 +42,10 @@ In this site project, we can post many jobs through the publisher's account and 
 * ![Example screenshot](./imgs/acre.PNG)
 * screenshot for publisher Account
 ![Example screenshot](./imgs/pu.PNG)
+
+* publisher (publish job)
+* 
+![Example screenshot](./imgs/acpu.PNG)
 
 
 
