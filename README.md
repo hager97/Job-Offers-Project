@@ -13,10 +13,9 @@ In this site project, we can post many jobs through the publisher's account and 
 ## Screenshots
 * researcher usecase diagram
 ![Example screenshot](./imgs/researcher.PNG)
-* researcher apply for job
-* ![Example screenshot](./imgs/acre.PNG)
+
 * publisher usecase digram
-* 
+
 ![Example screenshot](./imgs/publisher.PNG)
 
 * publisher (publish job)
@@ -41,6 +40,8 @@ In this site project, we can post many jobs through the publisher's account and 
 ![Example screenshot](./imgs/ad.PNG)
 * screenshot for researcher Account
 ![Example screenshot](./imgs/re.PNG)
+* researcher apply for job
+* ![Example screenshot](./imgs/acre.PNG)
 * screenshot for publisher Account
 ![Example screenshot](./imgs/pu.PNG)
 
