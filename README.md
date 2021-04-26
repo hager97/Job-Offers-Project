@@ -40,4 +40,4 @@ In this site project, we can post many jobs through the publisher's account and 
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by  hagerhussien55@gmail.com - feel free to contact me!
