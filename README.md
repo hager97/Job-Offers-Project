@@ -31,11 +31,11 @@ In this site project, we can post many jobs through the publisher's account and 
 ## Features
 
 * screenshot for Admin Account
-![Example screenshot](./imgs/publisher.PNG)
+![Example screenshot](./imgs/ad.PNG)
 * screenshot for researcher Account
-![Example screenshot](./imgs/publisher.PNG)
+![Example screenshot](./imgs/re.PNG)
 * screenshot for publisher Account
-![Example screenshot](./imgs/publisher.PNG)
+![Example screenshot](./imgs/pu.PNG)
 
 
 
