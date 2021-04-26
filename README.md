@@ -13,8 +13,15 @@ In this site project, we can post many jobs through the publisher's account and 
 ## Screenshots
 * researcher usecase diagram
 ![Example screenshot](./imgs/researcher.PNG)
+* researcher apply for job
+* ![Example screenshot](./imgs/acre.PNG)
 * publisher usecase digram
+* 
 ![Example screenshot](./imgs/publisher.PNG)
+
+* publisher (publish job)
+* 
+![Example screenshot](./imgs/acpu.PNG)
 * admin usecase diagram
 
 ![Example screenshot](./imgs/admin.PNG)
